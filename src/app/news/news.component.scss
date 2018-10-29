@@ -1,0 +1,75 @@
+// Css for top image and this div context
+.top-banner-news {
+  /* height and width */
+  width: 100%;
+  height: 314px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+}
+
+// Css for overlay top banner
+.top-banner-overlay {
+  background: #6a0100;
+  opacity: 0.59;
+  height: 314px;
+  width: 100%;
+  position: absolute;
+}
+
+
+.narrow-shape {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+}
+
+.shape {
+  width: 242px;
+  height: 57px;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+// Css for container of
+.container-shape {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+// Css for Value Proposition background and overall section div
+.card-bg {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+}
+
+// Css for setting container of value proposition context | this part must change related to media query
+.card-container {
+  width: 1200px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Css for setting div of value proposition context | this part must change related to media query
+.card-section {
+  padding-top: 70px;
+  width: 950px;
+}

@@ -1,0 +1,249 @@
+// Css for top image and this div context
+.top-banner-bg {
+  /* height and width */
+  width: 100%;
+  height: 709px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+}
+
+// Css for improving some issue in responsive in top banner div
+.container-top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 130px;
+}
+
+// Css for overlay top banner
+.top-banner-overlay {
+  background: #000000;
+  opacity: 0.59;
+  height: 709px;
+  width: 100%;
+  position: absolute;
+}
+
+// Css for overlay top narrow
+.narrow {
+  background: #000000;
+  opacity: 0.5;
+  height: 51px;
+  width: 100%;
+  position: absolute;
+}
+
+// Css for slogan top banner
+.slogan-property {
+  font-size: 24px;
+  line-height: 41px;
+  font-weight: 500;
+  text-align: center;
+  direction: rtl;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  padding-top: 20px;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+// Css for button in top banner
+.top-banner-btn {
+  background-color: #f3881b;
+  color: #ffffff;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  width: 225px;
+  margin-top: 35px;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+.title-property {
+  font-size: 15px;
+  padding: 10px;
+  line-height: 25px;
+  font-weight: 500;
+  display: inline-grid;
+  z-index: 2;
+  position: relative;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.title-property:hover {
+  color: #f3881b;
+}
+
+// Css for Value Proposition background and overall section div
+.vp-bg {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+// Css for setting container of value proposition context | this part must change related to media query
+.vp-container {
+  width: 950px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Css for setting div of value proposition context | this part must change related to media query
+.vp-section {
+  padding-top: 70px;
+  width: 950px;
+}
+
+// Css for div of text | this part must change related to media query
+.vp-txt-pd {
+  padding-right: 80px;
+  padding-left: 80px;
+  text-align: center;
+}
+
+// Css for value proposition title | this part must change related to media query
+.vp-title {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 500;
+  padding-right: 10px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.shape {
+  width: 242px;
+  height: 57px;
+  border: 1px solid #C9390C;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+.narrow-shape {
+  width: 100%;
+  height: 1px;
+  background-color: #C9390C;
+  position: absolute;
+}
+
+// Css for setting container of restaurant services context | this part must change related to media query
+.service-container, .popular-menu-container, .address-container {
+  width: 1300px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Css for setting div of value proposition context | this part must change related to media query
+.service-section, .popular-menu-section {
+  padding-top: 70px;
+  width: 1300px;
+  //margin-right: 40px;
+}
+
+.services {
+  /* height and width */
+  width: 584px;
+  height: 251px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 35px #616161; //applying shadow to 4 sides of card
+  display: flex;
+}
+
+.services-overlay {
+  background: #000000;
+  opacity: 0.59;
+  height: 251px;
+  width: 584px;
+  position: absolute;
+}
+
+.services-shape {
+  width: 242px;
+  height: 57px;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: #c9380b66;
+  margin-top: 97px;
+  margin-right: 171px;
+}
+
+.main-box {
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.menu-back-layout {
+  background: #6a0100;
+  top: 115px;
+  height: 530px;
+  width: 100%;
+  position: absolute;
+}
+
+.popular-menu {
+  /* height and width */
+  width: 388px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.address-bg {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  //justify-content: right;
+  align-items: center;
+  position: relative;
+}
+
+.address-back-layout {
+  background: #c9380b;
+  height: 492px;
+  width: 1143px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}

@@ -1,0 +1,153 @@
+<div class="top-banner-bg" style="background-image: url('/assets/imgs/1.jpg')">
+  <!--Overlay-->
+  <div class="top-banner-overlay"></div>
+  <!--Overlay-->
+
+  <!--Make narrow header go down from top of screen-->
+  <div style="height: 20px"></div>
+  <!--Make narrow header go down from top of screen-->
+
+  <!--Logo-->
+  <div class="" style="height: 90px; width: 100%; text-align: center; z-index: 1; position: relative">
+    <a routerLinkActive="active" routerLink="/">
+      <img src="/assets/imgs/logo.png" height="78" width="134">
+    </a>
+  </div>
+  <!--Logo-->
+
+  <!--Create top narrow header-->
+  <div class="narrow"></div>
+  <div style="direction: rtl; text-align: center">
+    <a routerLinkActive="active" routerLink="/menu" class="header-title txt-custom-white title-property">منو</a>
+    <a routerLinkActive="active" routerLink="/news" class="header-title txt-custom-white title-property">اخبار</a>
+    <a routerLinkActive="active" routerLink="/about-us" class="header-title txt-custom-white title-property">درباره
+      ما</a>
+    <a routerLinkActive="active" routerLink="/contact-us" class="header-title txt-custom-white title-property">تماس با
+      ما</a>
+  </div>
+  <!--Create top narrow header-->
+
+  <!-- Content -->
+  <div class="container-top-banner">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="text-center"> <!--//text-center need to make button align in center of screen-->
+        <h1 class="txt-custom-white slogan-property">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است.</h1>
+        <button routerLinkActive="active" routerLink="/menu" class="btn top-banner-btn">
+          منوی رستوران
+        </button>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Content -->
+</div>
+
+
+<!--Value Proposition-->
+<div class="vp-bg">
+  <div class="vp-container">
+    <div class="vp-section">
+      <!--Grid row-->
+      <div class="row d-rtl">
+        <!--Grid column-->
+        <div class="vp-txt-pd" *ngFor='let valueP of vp'>
+          <img class="" src="{{ valueP.imagePath }}" height="152" width="152">
+          <h1 class="vp-title">{{ valueP.title }}</h1>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+</div>
+<!--Value Proposition-->
+
+
+<!--Restaurant Services-->
+<div class="vp-bg">
+  <div class="narrow-shape">
+  </div>
+  <div class="shape">
+    <div style="font-size: 20px;
+    color: #6a0100;
+    font-weight: 500;
+    margin-top: 10px">سرویس های رستوران
+    </div>
+  </div>
+</div>
+
+
+<div class="vp-bg" style="margin-bottom: 40px">
+  <div class="service-container">
+    <div class="service-section">
+      <!--Grid row-->
+      <div class="main-box d-rtl">
+        <!--Grid column-->
+        <div class="" *ngFor='let services of service'>
+          <div class="services" [ngStyle]="{'background-image': 'url(' + services.imagePath + ')'}">
+
+            <!--Overlay-->
+            <div class="services-overlay"></div>
+            <!--Overlay-->
+
+            <div class="services-shape">
+              <div style="font-size: 18px; color: white; font-weight: 500; margin-top: 10px">{{services.title}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+</div>
+<!--Restaurant Services-->
+
+
+<!--Restaurant Menu-->
+<div class="vp-bg">
+  <div class="narrow-shape">
+  </div>
+  <div class="shape">
+    <div style="font-size: 20px;
+    color: #6a0100;
+    font-weight: 500;
+    margin-top: 10px">منوی محبوب رستوران
+    </div>
+  </div>
+</div>
+
+
+<div class="vp-bg">
+  <div class="menu-back-layout"></div>
+
+  <div class="popular-menu-container">
+    <div class="popular-menu-section">
+      <!--Grid row-->
+      <div class="main-box d-rtl">
+        <!--Grid column-->
+        <div class="" *ngFor='let popularmenu of popularMenu'>
+          <div class="popular-menu" [ngStyle]="{'background-image': 'url(' + popularmenu.imagePath + ')'}">
+          </div>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+</div>
+<!--Restaurant Menu-->
+
+<!--Address-->
+<div class="address-bg d-rtl">
+  <div class="address-container">
+    <div class="address-back-layout"></div>
+  </div>
+</div>
+<!--Address-->

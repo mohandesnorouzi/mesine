@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(~src/assets/css/fontiran.css);
+@import url(~src/assets/css/fontiran2.css);
+
+body {
+  font-family: IRANSans, iranyekan, roboto, Arial !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bg-custom-red {
+  background-color: #6a0100;
+}
+
+.txt-custom-white {
+  color: white;
+}
+
+.d-rtl {
+  direction: rtl;
+}
+
+.d-ltr {
+  direction: ltr;
+}

@@ -1,0 +1,66 @@
+<div class="navbar navbar-expand justify-content-center header-height d-rtl"
+     *ngIf="router.url !== '/'">
+  <!--navBar-expand class make content in navBar horizontal-->
+
+
+  <ul class="navbar-nav" style="padding: 0">
+    <div>
+
+      <!--Logo-->
+      <a routerLinkActive="active" routerLink="/" class="navbar-brand" style="margin-left: 30px">
+        <img src="/assets/imgs/logo.png" height="58" width="96">
+      </a>
+      <!--Logo-->
+
+      <div class="txt-adjustment" style="width: 70px" *ngIf="router.url === '/menu';else menu"
+           [ngStyle]="{'border-bottom': '2px solid #c9380b','padding-bottom': '5px'}">
+        <a class="header-title" [ngStyle]="{'color': '#c9380b'}"
+           routerLinkActive="active" routerLink="/menu">منو</a>
+      </div>
+      <ng-template #menu>
+        <div class="txt-adjustment" style="width: 70px">
+          <a class="header-title" routerLinkActive="active" routerLink="/menu">منو</a>
+        </div>
+      </ng-template>
+
+
+      <div class="txt-adjustment" style="width: 70px" *ngIf="router.url === '/news';else news"
+           [ngStyle]="{'border-bottom': '2px solid #c9380b','padding-bottom': '5px'}">
+        <a class="header-title" [ngStyle]="{'color': '#c9380b'}"
+           routerLinkActive="active" routerLink="/news">اخبار</a>
+      </div>
+      <ng-template #news>
+        <div class="txt-adjustment" style="width: 70px">
+          <a class="header-title" routerLinkActive="active" routerLink="/news">اخبار</a>
+        </div>
+      </ng-template>
+
+
+      <div class="txt-adjustment" style="width: 110px" *ngIf="router.url === '/about-us';else aboutUs"
+           [ngStyle]="{'border-bottom': '2px solid #c9380b','padding-bottom': '5px'}">
+        <a class="header-title" [ngStyle]="{'color': '#c9380b'}"
+           routerLinkActive="active" routerLink="/about-us">درباره ما</a>
+      </div>
+      <ng-template #aboutUs>
+        <div class="txt-adjustment" style="width: 110px">
+          <a class="header-title" routerLinkActive="active" routerLink="/about-us">درباره ما</a>
+        </div>
+      </ng-template>
+
+
+      <div class="txt-adjustment" style="width: 110px" *ngIf="router.url === '/contact-us';else contactUs"
+           [ngStyle]="{'border-bottom': '2px solid #c9380b','padding-bottom': '5px'}">
+        <a class="header-title" [ngStyle]="{'color': '#c9380b'}"
+           routerLinkActive="active" routerLink="/contact-us">تماس با ما</a>
+      </div>
+      <ng-template #contactUs>
+        <div class="txt-adjustment" style="width: 110px">
+          <a class="header-title" routerLinkActive="active" routerLink="/contact-us">تماس با ما</a>
+        </div>
+      </ng-template>
+
+    </div>
+  </ul>
+
+
+</div>
