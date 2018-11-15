@@ -1,51 +1,54 @@
-<div class="top-banner-bg" style="background-image: url('/assets/imgs/1.jpg')">
-  <!--Overlay-->
-  <div class="top-banner-overlay"></div>
-  <!--Overlay-->
+<div class="top-banner-bg"  *ngIf="topBannerURL" [ngStyle]="{'background-image': 'url(' + topBannerURL + ')'}">
+<!--<div class="top-banner-bg"  [ngStyle]="getBackgroundStyle">-->
+<!--<div class="top-banner-bg"  style="background-image: url('http://194.135.90.60/Back_end_Media/Media/Screenshot_from_2018-10-25_17-31-43.png')">-->
+  <div class="top-banner-bg">
+    <!--Overlay-->
+    <div class="top-banner-overlay"></div>
+    <!--Overlay-->
 
-  <!--Make narrow header go down from top of screen-->
-  <div style="height: 20px"></div>
-  <!--Make narrow header go down from top of screen-->
+    <!--Make narrow header go down from top of screen-->
+    <div style="height: 20px"></div>
+    <!--Make narrow header go down from top of screen-->
 
-  <!--Logo-->
-  <div class="" style="height: 90px; width: 100%; text-align: center; z-index: 1; position: relative">
-    <a routerLinkActive="active" routerLink="/">
-      <img src="/assets/imgs/logo.png" height="78" width="134">
-    </a>
-  </div>
-  <!--Logo-->
-
-  <!--Create top narrow header-->
-  <div class="narrow"></div>
-  <div style="direction: rtl; text-align: center">
-    <a routerLinkActive="active" routerLink="/menu" class="header-title txt-custom-white title-property">منو</a>
-    <a routerLinkActive="active" routerLink="/news" class="header-title txt-custom-white title-property">اخبار</a>
-    <a routerLinkActive="active" routerLink="/about-us" class="header-title txt-custom-white title-property">درباره
-      ما</a>
-    <a routerLinkActive="active" routerLink="/contact-us" class="header-title txt-custom-white title-property">تماس با
-      ما</a>
-  </div>
-  <!--Create top narrow header-->
-
-  <!-- Content -->
-  <div class="container-top-banner">
-    <!--Grid row-->
-    <div class="row">
-      <!--Grid column-->
-      <div class="text-center"> <!--//text-center need to make button align in center of screen-->
-        <h1 class="txt-custom-white slogan-property">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-          استفاده از طراحان گرافیک است.</h1>
-        <button routerLinkActive="active" routerLink="/menu" class="btn top-banner-btn">
-          منوی رستوران
-        </button>
-      </div>
-      <!--Grid column-->
+    <!--Logo-->
+    <div class="" style="height: 90px; width: 100%; text-align: center; z-index: 1; position: relative">
+      <a routerLinkActive="active" routerLink="/">
+        <img src="/assets/imgs/logo.png" height="78" width="134">
+      </a>
     </div>
-    <!--Grid row-->
-  </div>
-  <!-- Content -->
-</div>
+    <!--Logo-->
 
+    <!--Create top narrow header-->
+    <div class="narrow"></div>
+    <div style="direction: rtl; text-align: center">
+      <a routerLinkActive="active" routerLink="/menu" class="header-title txt-custom-white title-property">منو</a>
+      <a routerLinkActive="active" routerLink="/news" class="header-title txt-custom-white title-property">اخبار</a>
+      <a routerLinkActive="active" routerLink="/about-us" class="header-title txt-custom-white title-property">درباره
+        ما</a>
+      <a routerLinkActive="active" routerLink="/contact-us" class="header-title txt-custom-white title-property">تماس با
+        ما</a>
+    </div>
+    <!--Create top narrow header-->
+
+    <!-- Content -->
+    <div class="container-top-banner">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="text-center"> <!--//text-center need to make button align in center of screen-->
+          <h1 class="txt-custom-white slogan-property">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است.</h1>
+          <button routerLinkActive="active" routerLink="/menu" class="btn top-banner-btn">
+            منوی رستوران
+          </button>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Content -->
+  </div>
+</div>
 
 <!--Value Proposition-->
 <div class="vp-bg">
@@ -87,7 +90,7 @@
       <!--Grid row-->
       <div class="main-box d-rtl">
         <!--Grid column-->
-        <div class="" *ngFor='let services of service'>
+        <div class="" *ngFor='let services of serviceArray'>
           <div class="services" [ngStyle]="{'background-image': 'url(' + services.imagePath + ')'}">
 
             <!--Overlay-->

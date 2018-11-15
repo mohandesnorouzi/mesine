@@ -12,6 +12,9 @@ import {RestaurantServiceComponent} from './restaurant-service/restaurant-servic
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {AppRoutingModule} from './app-routing.module';
+import {AppGlobals} from './services/app-globals.service';
+import {ImagesService} from './services/images.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,9 +31,10 @@ import {AppRoutingModule} from './app-routing.module';
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppGlobals, ImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
