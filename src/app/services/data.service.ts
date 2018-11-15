@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 
 
 @Injectable() // This is for let some service injectable in other service
-export class ImagesService {
+export class DataService {
 
   constructor(private router: Router, private httpClient: HttpClient,
               private appGlobal: AppGlobals) {
@@ -23,4 +23,13 @@ export class ImagesService {
   getServices() {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'services/', null);
   }
+
+  getPopularMenu() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'favorite/', null);
+  }
+
+  getValueProposition() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'value-proposition/', null);
+  }
+
 }

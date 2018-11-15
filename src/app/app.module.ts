@@ -13,7 +13,7 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {AppRoutingModule} from './app-routing.module';
 import {AppGlobals} from './services/app-globals.service';
-import {ImagesService} from './services/images.service';
+import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
@@ -34,7 +34,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AppGlobals, ImagesService],
+  providers: [AppGlobals, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

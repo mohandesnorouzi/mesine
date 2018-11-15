@@ -57,7 +57,7 @@
       <!--Grid row-->
       <div class="row d-rtl">
         <!--Grid column-->
-        <div class="vp-txt-pd" *ngFor='let valueP of vp'>
+        <div class="vp-txt-pd" *ngFor='let valueP of vpArray'>
           <img class="" src="{{ valueP.imagePath }}" height="152" width="152">
           <h1 class="vp-title">{{ valueP.title }}</h1>
         </div>
@@ -135,7 +135,7 @@
       <!--Grid row-->
       <div class="main-box d-rtl">
         <!--Grid column-->
-        <div class="" *ngFor='let popularmenu of popularMenu'>
+        <div class="" *ngFor='let popularmenu of popularMenuArray'>
           <div class="popular-menu" [ngStyle]="{'background-image': 'url(' + popularmenu.imagePath + ')'}">
           </div>
         </div>

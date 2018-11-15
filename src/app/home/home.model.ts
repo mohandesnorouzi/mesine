@@ -20,11 +20,9 @@ export class Services {
 }
 
 export class PopularMenu {
-  public title: string;
   public imagePath: string;
 
-  constructor(title: string, imagePath: string) {
-    this.title = title;
+  constructor(imagePath: string) {
     this.imagePath = imagePath;
   }
 }
