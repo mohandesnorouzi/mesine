@@ -54,14 +54,14 @@
   <div class="vp-container">
     <div class="vp-section">
       <!--Grid row-->
-      <div class="row d-rtl">
+      <!--<div class="row d-rtl">-->
         <!--Grid column-->
         <div class="vp-txt-pd" *ngFor='let valueP of vpArray'>
           <img class="" src="{{ valueP.imagePath }}" height="152" width="152">
           <h1 class="vp-title">{{ valueP.title }}</h1>
         </div>
         <!--Grid column-->
-      </div>
+      <!--</div>-->
       <!--Grid row-->
     </div>
   </div>
@@ -97,7 +97,7 @@
             <!--Overlay-->
 
             <div class="services-shape">
-              <div style="font-size: 18px; color: white; font-weight: 500; margin-top: 10px">{{services.title}}
+              <div class="services-txt">{{services.title}}
               </div>
             </div>
 
