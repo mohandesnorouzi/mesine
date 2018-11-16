@@ -164,7 +164,7 @@
 // Css for setting div of value proposition context | this part must change related to media query
 .service-section, .popular-menu-section {
   padding-top: 70px;
-  width: 1300px;
+  //width: 1300px;
   //margin-right: 40px;
 }
 
@@ -228,7 +228,7 @@
 
 .popular-menu {
   /* height and width */
-  width: 388px;
+  width: 370px;
   height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -280,10 +280,10 @@
 @media screen and (max-width: 1200px) {
 
   .services {
-    width: 450px;
+    width: 440px;
   }
   .services-overlay {
-    width: 450px;
+    width: 440px;
   }
   .services-shape {
     margin-right: 110px;
@@ -354,5 +354,46 @@
   }
   .services-txt {
     font-size: 16px;
+  }
+}
+
+// Popular Menu responsive
+@media screen and (max-width: 1200px) {
+
+  .popular-menu {
+    width: 300px;
+  }
+}
+
+// Popular Menu responsive
+@media screen and (max-width: 992px) {
+
+  .popular-menu {
+    width: 230px;
+    height: 230px;
+  }
+  .menu-back-layout {
+    height: 390px;
+  }
+}
+
+// Popular Menu responsive
+@media screen and (max-width: 768px) {
+
+  .popular-menu {
+    width: 250px;
+    height: 250px;
+  }
+  .menu-back-layout {
+    height: 700px;
+  }
+}
+
+// Popular Menu responsive
+@media screen and (max-width: 576px) {
+
+  .popular-menu {
+    //width: 300px;
+    //height: 300px;
   }
 }
