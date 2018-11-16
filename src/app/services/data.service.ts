@@ -32,4 +32,13 @@ export class DataService {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'value-proposition/', null);
   }
 
+
+  getNewsBanner() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-banner/', null);
+  }
+
+  getNews() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-card/', null);
+  }
+
 }

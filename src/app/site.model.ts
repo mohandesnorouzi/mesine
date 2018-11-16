@@ -26,3 +26,15 @@ export class PopularMenu {
     this.imagePath = imagePath;
   }
 }
+
+export class News {
+  public title: string;
+  public summary: string;
+  public imagePath: string;
+
+  constructor(title: string, summary: string, imagePath: string) {
+    this.title = title;
+    this.summary = summary;
+    this.imagePath = imagePath;
+  }
+}

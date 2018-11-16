@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PopularMenu, Services, ValueProposition} from './home.model';
+import {PopularMenu, Services, ValueProposition} from '../site.model';
 import {DataService} from '../services/data.service';
 import {AppGlobals} from '../services/app-globals.service';
 
@@ -18,14 +18,6 @@ export class HomeComponent implements OnInit {
   serviceArray = [];
   popularMenuArray = [];
 
-  vp: ValueProposition[] = [
-    new ValueProposition('نان تنوری تازه',
-      '/assets/imgs/bread.svg'),
-    new ValueProposition('موسیقی زنده',
-      '/assets/imgs/tur.svg'),
-    new ValueProposition('غذاهای اصیل ایرانی',
-      '/assets/imgs/iranian food.svg')
-  ];
 
   constructor(private dataService: DataService, private appGlobal: AppGlobals) {
   }
