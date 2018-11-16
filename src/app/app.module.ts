@@ -15,7 +15,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppGlobals} from './services/app-globals.service';
 import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
-import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { MarkdownModule } from 'ngx-markdown';
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    MarkdownModule.forRoot()
   ],
   providers: [AppGlobals, DataService],
   bootstrap: [AppComponent]
