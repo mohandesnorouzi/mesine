@@ -239,6 +239,7 @@
   position: relative;
   display: flex;
   z-index: 1;
+  box-shadow: 0 0 35px black; //applying shadow to 4 sides of card
 }
 
 .address-bg {
@@ -393,7 +394,22 @@
 @media screen and (max-width: 576px) {
 
   .popular-menu {
-    //width: 300px;
-    //height: 300px;
+    width: 140px;
+    height: 140px;
+  }
+  .menu-back-layout {
+    height: 210px;
+  }
+}
+
+// Popular Menu responsive
+@media screen and (max-width: 478px) {
+
+  .popular-menu {
+    width: 140px;
+    height: 140px;
+  }
+  .menu-back-layout {
+    height: 370px;
   }
 }
