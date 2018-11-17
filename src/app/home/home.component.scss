@@ -122,6 +122,11 @@
   text-align: center;
 }
 
+.value-proposition-size {
+  height: 225px;
+  width: 225px;
+}
+
 // Css for value proposition title | this part must change related to media query
 .vp-title {
   font-size: 20px;
@@ -239,7 +244,7 @@
   position: relative;
   display: flex;
   z-index: 1;
-  box-shadow: 0 0 35px black; //applying shadow to 4 sides of card
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); //applying shadow to 4 sides of card
 }
 
 .address-bg {
@@ -267,6 +272,24 @@
     padding-right: 4%;
     padding-left: 4%;
   }
+  .value-proposition-size {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+// Value proposition responsive
+@media screen and (max-width: 768px) {
+
+  .vp-section {
+    width: 95%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .value-proposition-size {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 // Value proposition responsive
@@ -274,6 +297,16 @@
   .title-property {
     margin-right: 2%;
     margin-left: 2%;
+  }
+  .vp-section {
+    display: block;
+  }
+  .value-proposition-size {
+    height: 200px;
+    width: 200px;
+  }
+  .vp-title {
+    margin-bottom: 50px;
   }
 }
 
