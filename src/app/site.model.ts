@@ -31,10 +31,14 @@ export class News {
   public title: string;
   public summary: string;
   public imagePath: string;
+  public date: string;
+  public time: string;
 
-  constructor(title: string, summary: string, imagePath: string) {
+  constructor(title: string, summary: string, imagePath: string, date: string, time: string) {
     this.title = title;
     this.summary = summary;
     this.imagePath = imagePath;
+    this.date = date;
+    this.time = time;
   }
 }
