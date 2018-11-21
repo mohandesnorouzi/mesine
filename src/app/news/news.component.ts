@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DataService} from '../services/data.service';
 import {AppGlobals} from '../services/app-globals.service';
 import {News} from '../site.model';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-news',
@@ -15,7 +16,14 @@ export class NewsComponent implements OnInit {
   newsArray = [];
   public newsCardNum: any;
 
-  constructor(private dataService: DataService, private appGlobal: AppGlobals) {
+  constructor(private dataService: DataService, private appGlobal: AppGlobals, private router: Router) {
+
+    // Make page start from top
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 
   // Sort data on date and time

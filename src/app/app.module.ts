@@ -15,6 +15,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppGlobals} from './services/app-globals.service';
 import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
+import {ClickOutsideModule} from 'ng4-click-outside';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    MatIconModule,
+    ClickOutsideModule
   ],
   providers: [AppGlobals, DataService],
   bootstrap: [AppComponent]

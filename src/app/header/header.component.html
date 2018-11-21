@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand justify-content-center header-height d-rtl"
-     *ngIf="router.url !== '/'">
+     *ngIf="router.url !== '/' && MobileScreen()">
   <!--navBar-expand class make content in navBar horizontal-->
 
 
@@ -64,3 +64,36 @@
 
 
 </div>
+
+<div class="navbar navbar-expand justify-content-center header-height d-rtl"
+     *ngIf="router.url !== '/' && !MobileScreen()"
+     style="padding-top: 0;padding-bottom: 0;">
+
+  <div class="m-auto" style="width: 100%;text-align: center">
+
+    <mat-icon svgIcon="menu" style="color: #6a0100;right: 16px;top: 20px;position: absolute;cursor: pointer"
+              (click)="openNav()"></mat-icon>
+    <!--Logo-->
+    <a routerLinkActive="active" routerLink="/" class="navbar-brand" style="margin:0;position: relative">
+      <img src="/assets/imgs/logo.png" height="42" width="70">
+    </a>
+    <!--Logo-->
+    <mat-icon svgIcon="foodMenu" style="color: #6a0100;left: 16px;top: 20px;position: absolute;cursor: pointer"
+              (click)="closeNav()"></mat-icon>
+  </div>
+
+  <div id="mySideNav" class="sideNav" style="list-style: none;"
+       (clickOutside)="onClickedOutside($event)">
+
+      <!--<p class="closebtn" (click)="closeNav()">&times;</p>-->
+      <a class="link" routerLinkActive="active" routerLink="/news">اخبار</a>
+      <!--<p class="link" routerLinkActive="active" routerLink="/about-us">درباره&zwnj;ما</p>-->
+      <a class="link" routerLinkActive="active" routerLink="/about-us">درباره&nbsp;ما</a>
+      <a class="link" routerLinkActive="active" routerLink="/contact-us">تماس&nbsp;با&nbsp;ما</a>
+
+
+  </div>
+
+</div>
+
+

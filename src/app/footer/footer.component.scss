@@ -7,3 +7,44 @@
   position: relative;
   height: 176px;
 }
+
+.container {
+  width: 900px;
+  display: inline-flex;
+}
+
+.txt {
+  font-size: 13px;
+  line-height: 22.0px;
+  font-weight: 500;
+  width: 225px;
+  color: white;
+  position: relative;
+}
+
+// Css for menu button
+.menu-button {
+  background-color: #f3881b;
+  color: #ffffff;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  line-height: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  height: 30px;
+  width: 138px;
+  top: 10px;
+  left: 10px;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+.link {
+  cursor: pointer;
+  outline: none;
+}
+
+.link:hover {
+  color: #f3881b;
+}

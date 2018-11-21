@@ -17,3 +17,44 @@
   display: inline-flex;
   justify-content: center;
 }
+
+.sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: right;
+}
+
+.sideNav a {
+  display: block;
+  transition: 0.3s;
+}
+.link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6a0100;
+  outline: none;
+  padding-right: 20px;
+  cursor: pointer;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  height: 30px;
+}
+
+.link:hover {
+  color: #f3881b;
+}
+
+.link:focus {
+  background-color: #f3881b;
+  height: 30px;
+  color: white;
+  outline: none;
+}
