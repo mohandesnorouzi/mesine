@@ -48,3 +48,16 @@
 .link:hover {
   color: #f3881b;
 }
+
+@media screen and (max-width: 576px) {
+
+  .footer-bg {
+    min-height: 320px;
+    padding-bottom: 40px;
+  }
+  .container {
+    width: 90%;
+    position: relative;
+    bottom: 70px;
+  }
+}

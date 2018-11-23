@@ -1,26 +1,84 @@
 <!--Footer section-->
 <div class="bg-custom-red footer-bg">
 
-  <div class="container" style="text-align: right;direction: rtl">
+  <div class="container" style="text-align: right;direction: rtl" *ngIf="BiggerThanTablet()">
 
     <div class="txt" style="">
       <span>لورم ایپسوم متن با تولید سادگی نامفهوم از صنعت چاپ است</span>
       <button routerLinkActive="active" routerLink="/menu" class="btn menu-button">منو</button>
-
     </div>
+
     <div class="txt" style="">
       <ul style="list-style: none;">
         <li class="link" routerLinkActive="active" routerLink="/news">اخبار</li>
         <li class="link" routerLinkActive="active" routerLink="/about-us">درباره ما</li>
         <li class="link" routerLinkActive="active" routerLink="/contact-us">تماس با ما</li>
       </ul>
-
     </div>
-    <div class="txt" style="left: 50px;">از ساعت ۱۰ صبح تا ۳ بعد از ظهر و از ساعت ۱۸ تا ۱۱ شب پذیرای شما هستیم</div>
+
+    <div class="txt" style="left: 40px;">از ساعت ۱۰ صبح تا ۳ بعد از ظهر و از ساعت ۱۸ تا ۱۱ شب پذیرای شما هستیم</div>
     <div class="txt" style="">آدرس: خیابان ولیعصر ، خیابان بزرگمهر ، نبش خیابان فریمان و بزرگمهر
       <br> شماره تماس ۶۶۴۶۸۰۰۰
     </div>
 
   </div>
 
+
+  <div class="container" style="text-align: right;direction: rtl" *ngIf="Tablet()">
+
+    <div class="txt" style="">
+      <span>لورم ایپسوم متن با تولید سادگی نامفهوم از صنعت چاپ است</span>
+      <button routerLinkActive="active" routerLink="/menu" class="btn menu-button">منو</button>
+    </div>
+
+    <div class="txt" style="">
+      <ul style="list-style: none;">
+        <li class="link" routerLinkActive="active" routerLink="/news">اخبار</li>
+        <li class="link" routerLinkActive="active" routerLink="/about-us">درباره ما</li>
+        <li class="link" routerLinkActive="active" routerLink="/contact-us">تماس با ما</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="txt">از ساعت ۱۰ صبح تا ۳ بعد از ظهر و از ساعت ۱۸ تا ۱۱ شب پذیرای شما هستیم</div>
+      <br>
+      <div class="txt">آدرس: خیابان ولیعصر ، خیابان بزرگمهر ، نبش خیابان
+        فریمان و بزرگمهر
+        <br> شماره تماس ۶۶۴۶۸۰۰۰
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="container" style="text-align: right;direction: rtl" *ngIf="Mobile()">
+
+    <div class="txt" style="width: 300px;display: inline-grid">
+      <span>لورم ایپسوم متن با تولید سادگی نامفهوم از صنعت چاپ است</span>
+      <button routerLinkActive="active" routerLink="/menu" class="btn menu-button">منو</button>
+    </div>
+
+    <div class="txt" style="">
+      <ul style="list-style: none;">
+        <li class="link" routerLinkActive="active" routerLink="/news">اخبار</li>
+        <li class="link" routerLinkActive="active" routerLink="/about-us">درباره ما</li>
+        <li class="link" routerLinkActive="active" routerLink="/contact-us">تماس با ما</li>
+      </ul>
+    </div>
+
+    <div style="position: absolute;top: 140px;width: 100%;">
+      <div class="txt" style="width: 90%">از ساعت ۱۰ صبح تا ۳ بعد از ظهر و از ساعت ۱۸ تا ۱۱ شب پذیرای شما هستیم</div>
+      <br>
+      <div class="txt" style="width: 90%">آدرس: خیابان ولیعصر ، خیابان بزرگمهر ، نبش خیابان
+        فریمان و بزرگمهر
+        <br> شماره تماس ۶۶۴۶۸۰۰۰
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+<!--Footer section-->
