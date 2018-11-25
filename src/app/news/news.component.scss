@@ -90,6 +90,12 @@
   text-align: right;
 }
 
+.card {
+  max-height: 365px;
+  height: 365px;
+  border-radius: 10px;
+}
+
 .card-img {
   height: 203px;
   width: 340px;
@@ -97,6 +103,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% center;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 .card-title-property {

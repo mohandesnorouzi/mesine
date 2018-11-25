@@ -17,6 +17,7 @@ import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {ClickOutsideModule} from 'ng4-click-outside';
+import { NewsContentComponent } from './news/news-content/news-content.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ClickOutsideModule} from 'ng4-click-outside';
     RestaurantMenuComponent,
     RestaurantServiceComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NewsContentComponent
   ],
   imports: [
     BrowserModule,
