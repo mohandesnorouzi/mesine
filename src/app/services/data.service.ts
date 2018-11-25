@@ -41,4 +41,9 @@ export class DataService {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-card/', null);
   }
 
+  getOneNews(id: string) {
+    const data = {id: id};
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-content/', data);
+  }
+
 }

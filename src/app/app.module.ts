@@ -18,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {ClickOutsideModule} from 'ng4-click-outside';
 import { NewsContentComponent } from './news/news-content/news-content.component';
+import { AllNewsComponent } from './news/all-news/all-news.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NewsContentComponent } from './news/news-content/news-content.component
     RestaurantServiceComponent,
     HeaderComponent,
     FooterComponent,
-    NewsContentComponent
+    NewsContentComponent,
+    AllNewsComponent
   ],
   imports: [
     BrowserModule,

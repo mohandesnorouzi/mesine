@@ -28,15 +28,34 @@ export class PopularMenu {
 }
 
 export class News {
+  public postURL: string;
   public title: string;
   public summary: string;
   public imagePath: string;
   public date: string;
   public time: string;
 
-  constructor(title: string, summary: string, imagePath: string, date: string, time: string) {
+
+  constructor(postURL: string, title: string, summary: string, imagePath: string, date: string, time: string) {
+    this.postURL = postURL;
     this.title = title;
     this.summary = summary;
+    this.imagePath = imagePath;
+    this.date = date;
+    this.time = time;
+  }
+}
+
+export class OneNews {
+  public title: string;
+  public content: string;
+  public imagePath: string;
+  public date: string;
+  public time: string;
+
+  constructor(title: string, content: string, imagePath: string, date: string, time: string) {
+    this.title = title;
+    this.content = content;
     this.imagePath = imagePath;
     this.date = date;
     this.time = time;

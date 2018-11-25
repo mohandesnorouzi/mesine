@@ -25,7 +25,6 @@ export class FooterComponent implements OnInit {
 
   Mobile() {
     this.innerWidth = window.innerWidth;
-    console.log(this.innerWidth);
     return this.innerWidth <= 576;
   }
 
