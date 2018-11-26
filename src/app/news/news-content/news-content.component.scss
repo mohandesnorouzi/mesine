@@ -25,14 +25,25 @@
 }
 
 .shape {
-  width: 242px;
-  height: 57px;
+  width: 554px;
+  min-height: 57px;
+  height: auto;
   border: 1px solid white;
   border-radius: 25px;
   text-align: center;
   position: relative;
   z-index: 1;
   background-color: white;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.title-property {
+  font-size: 20px;
+  color: #6a0100;
+  font-weight: 500;
+  margin-top: 15px;
+  line-height: 30px;
 }
 
 // Css for container of
@@ -43,3 +54,114 @@
   align-items: center;
   position: relative;
 }
+
+.container {
+  width: 776px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 0;
+}
+
+.font-property {
+  //font-weight: 500;
+}
+
+.call-to-action-container {
+  width: 776px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.call-to-action-banner {
+  margin-top: 70px;
+  width: 784px;
+  height: 262px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+}
+
+.call-to-action-overlay {
+  background: black;
+  opacity: 0.59;
+  height: 262px;
+  width: 784px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.call-to-action-txt {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 42px;
+  max-width: 510px;
+  margin-left: 130px;
+  color: white;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+// Css for button in top banner
+.call-to-action-btn {
+  background-color: #f3881b;
+  color: #ffffff;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  width: 225px;
+  margin-top: 35px;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+@media screen and (max-width: 992px) {
+  .call-to-action-banner {
+    width: 720px;
+  }
+
+  .call-to-action-overlay {
+    width: 720px;
+  }
+
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .call-to-action-banner {
+    width: 540px;
+  }
+
+  .call-to-action-overlay {
+    width: 540px;
+  }
+
+  .container {
+    width: 540px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .call-to-action-banner {
+    width: 100%;
+  }
+
+  .call-to-action-overlay {
+    width: 95%;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .shape {
+    width: 95%;
+  }
+}
+

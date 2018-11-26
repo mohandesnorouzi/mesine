@@ -12,6 +12,10 @@ import {Router} from '@angular/router';
 export class NewsContentComponent implements OnInit {
 
   topBannerURL: any;
+  content: any;
+  title: any;
+  ctaBannerURL: any;
+  ctaTitle: any;
   newsItem: any;
 
   constructor(private dataService: DataService, private appGlobal: AppGlobals, private router: Router) {
@@ -26,7 +30,11 @@ export class NewsContentComponent implements OnInit {
           this.appGlobal.MediaURL + data['result'][0]['news_pic']['news_pic']['file'],
           data['result'][0]['info']['date'], data['result'][0]['info']['time']);
         this.topBannerURL = this.newsItem['imagePath'];
-        // console.log(this.newsItem['imagePath']);
+        this.content = this.newsItem['content'];
+        this.title = this.newsItem['title'];
+        this.ctaBannerURL = this.appGlobal.MediaURL + data['result'][0]['marketing_pic']['marketing_pic']['file'];
+        this.ctaTitle = data['result'][0]['marketing_pic']['marketing_pic']['title'];
+
       }
     }, error => {
       console.log(error);
