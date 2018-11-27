@@ -61,3 +61,63 @@ export class OneNews {
     this.time = time;
   }
 }
+
+export class MainFoods {
+  public title: string;
+  public description: string;
+  public imagePath: string;
+
+  constructor(title: string, description: string, imagePath: string) {
+    this.title = title;
+    this.description = description;
+    this.imagePath = imagePath;
+  }
+}
+
+export class Starters {
+  public title: string;
+  public description: string;
+  public imagePath: string;
+
+  constructor(title: string, description: string, imagePath: string) {
+    this.title = title;
+    this.description = description;
+    this.imagePath = imagePath;
+  }
+}
+
+export class Salads {
+  public title: string;
+  public description: string;
+  public imagePath: string;
+
+  constructor(title: string, description: string, imagePath: string) {
+    this.title = title;
+    this.description = description;
+    this.imagePath = imagePath;
+  }
+}
+
+export class Drinks {
+  public title: string;
+  public description: string;
+  public imagePath: string;
+
+  constructor(title: string, description: string, imagePath: string) {
+    this.title = title;
+    this.description = description;
+    this.imagePath = imagePath;
+  }
+}
+
+export class Desserts {
+  public title: string;
+  public description: string;
+  public imagePath: string;
+
+  constructor(title: string, description: string, imagePath: string) {
+    this.title = title;
+    this.description = description;
+    this.imagePath = imagePath;
+  }
+}

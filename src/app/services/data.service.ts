@@ -46,4 +46,28 @@ export class DataService {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-content/', data);
   }
 
+  getMainFood() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'main-course/', null);
+  }
+
+  getMainFoods() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'main-course/', null);
+  }
+
+  getStarters() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'starters/', null);
+  }
+
+  getSalads() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'salads/', null);
+  }
+
+  getDrinks() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'drinks/', null);
+  }
+
+  getDesserts() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'dessert/', null);
+  }
+
 }

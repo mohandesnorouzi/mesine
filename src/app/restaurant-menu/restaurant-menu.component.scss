@@ -43,3 +43,117 @@
   align-items: center;
   position: relative;
 }
+
+.circle {
+  height: 162px;
+  width: 162px;
+  border-radius: 50%;
+  border: 2px solid #f3881b;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+  outline: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+}
+
+.halfCircleBottom {
+  height: 162px;
+  width: 162px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  flex-wrap: wrap;
+  outline: none;
+  background: linear-gradient(to top, #f3881b 0%, #f3881b 40%, rgba(0, 0, 0, 0) 40%);
+  z-index: 1;
+}
+
+.main-category-txt {
+  position: relative;
+  top: 107px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.narrow {
+  width: 100%;
+  height: 84px;
+  background-color: #f3881b;
+  opacity: 0.3;
+}
+
+.menu-modify-width {
+  width: 60%;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: right;
+  width: 50%;
+  padding: 10px;
+  //height: 1000px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Category part responsive
+@media screen and (max-width: 1200px) {
+
+  .circle {
+    height: 140px;
+    width: 140px;
+  }
+  .halfCircleBottom {
+    height: 140px;
+    width: 140px;
+  }
+  .main-category-txt {
+    top: 90px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .circle {
+    height: 80px;
+    width: 80px;
+  }
+  .halfCircleBottom {
+    height: 80px;
+    width: 80px;
+  }
+  .main-category-txt {
+    top: 90px;
+    font-size: 16px;
+  }
+}

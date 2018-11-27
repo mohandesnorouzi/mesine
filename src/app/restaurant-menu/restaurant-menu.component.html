@@ -20,6 +20,208 @@
     </div>
   </div>
 </div>
-<p>
-  restaurant-menu works!
-</p>
+
+<div class="container" style="margin-top: 80px;text-align: center;direction: rtl">
+
+  <button class="circle" [class.active]="viewMode == 'MainFood'" rel="MainFood" (click)="viewMode ='MainFood'"
+          style="background-image: url('/assets/imgs/12.jpg')">
+    <div class="halfCircleBottom">
+      <p class="main-category-txt">غذای اصلی</p>
+    </div>
+  </button>
+
+  <button class="circle" [class.active]="viewMode == 'Starters'" rel="Starters" (click)="viewMode ='Starters'"
+          style="background-image: url('/assets/imgs/13.jpg')">
+    <div class="halfCircleBottom">
+      <p class="main-category-txt">پیش غذا</p>
+    </div>
+  </button>
+  <button class="circle" [class.active]="viewMode == 'Salads'" rel="Salads" (click)="viewMode ='Salads'"
+          style="background-image: url('/assets/imgs/14.jpg')">
+    <div class="halfCircleBottom">
+      <p class="main-category-txt">نوشیدنی</p>
+    </div>
+  </button>
+  <button class="circle" [class.active]="viewMode == 'Drinks'" rel="Drinks" (click)="viewMode ='Drinks'"
+          style="background-image: url('/assets/imgs/15.jpg')">
+    <div class="halfCircleBottom">
+      <p class="main-category-txt">سالاد و مخلفات</p>
+    </div>
+  </button>
+  <button class="circle" [class.active]="viewMode == 'Desserts'" rel="Desserts" (click)="viewMode ='Desserts'"
+          style="background-image: url('/assets/imgs/16.jpg')">
+    <div class="halfCircleBottom">
+      <p class="main-category-txt">دسر</p>
+    </div>
+  </button>
+
+</div>
+
+<div class="narrow" style="margin-top: 90px"></div>
+
+<div class="container" style="display: flex;max-width: 100%;margin-bottom: 30px;position: relative;min-height: 600px;">
+  <div style="position: relative;float: left;right: 115px;opacity: 0.4">
+    <img src="/assets/imgs/ornomental.svg" style="height: 232px;width: 232px">
+  </div>
+
+  <div [ngSwitch]="viewMode" class="menu-modify-width" style="text-align: right;">
+
+    <div *ngSwitchCase="'MainFood'">
+
+      <div class="row" style="margin-top: 90px">
+        <div class="column" style="padding-right: 100px;">
+          <div *ngFor="let items of mainFoodArray; let i=index">
+            <div *ngIf="i > mainFoodNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div *ngFor="let items of mainFoodArray; let i=index">
+            <div *ngIf="i <= mainFoodNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'Starters'">
+
+      <div class="row" style="margin-top: 90px">
+        <div class="column" style="padding-right: 100px;">
+          <div *ngFor="let items of starterArray; let i=index">
+            <div *ngIf="i > starterNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div *ngFor="let items of starterArray; let i=index">
+            <div *ngIf="i <= starterNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'Salads'">
+
+      <div class="row" style="margin-top: 90px">
+        <div class="column" style="padding-right: 100px;">
+          <div *ngFor="let items of saladArray; let i=index">
+            <div *ngIf="i > saladNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div *ngFor="let items of saladArray; let i=index">
+            <div *ngIf="i <= saladNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'Drinks'">
+
+      <div class="row" style="margin-top: 90px">
+        <div class="column" style="padding-right: 100px;">
+          <div *ngFor="let items of drinkArray; let i=index">
+            <div *ngIf="i > drinkNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div *ngFor="let items of drinkArray; let i=index">
+            <div *ngIf="i <= drinkNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'Desserts'">
+
+      <div class="row" style="margin-top: 90px">
+        <div class="column" style="padding-right: 100px;">
+          <div *ngFor="let items of dessertArray; let i=index">
+            <div *ngIf="i > dessertNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div *ngFor="let items of dessertArray; let i=index">
+            <div *ngIf="i <= dessertNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div style="top: 130px;opacity: 0.4;left: 79%;position: absolute;float: left;">
+    <img src="/assets/imgs/ornomental.svg" style="height: 580px;width: 580px">
+  </div>
+</div>
+
+
