@@ -71,9 +71,9 @@
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  padding-right: 6%;
-  padding-left: 6%;
-  width: 100%;
+  //padding-right: 6%;
+  //padding-left: 6%;
+  width: 1100px;
   padding-top: 70px;
   //width: 950px;
 }
@@ -134,8 +134,9 @@
 
 @media screen and (max-width: 1200px) {
   .card-section {
-    padding-right: 5%;
-    padding-left: 5%;
+    //padding-right: 5%;
+    //padding-left: 5%;
+    width: 960px;
   }
 
   .card-position-set {
