@@ -23,55 +23,101 @@
 
 <div class="container" style="margin-top: 80px;text-align: center;direction: rtl">
 
-  <button class="circle" [class.active]="viewMode == 'MainFood'" rel="MainFood" (click)="viewMode ='MainFood'"
-          style="background-image: url('/assets/imgs/12.jpg')">
-    <div class="halfCircleBottom">
-      <p class="main-category-txt">غذای اصلی</p>
-    </div>
+  <!--<button class="circle" [class.active]="viewMode == 'MainFood'" rel="MainFood" (click)="viewMode ='MainFood'"-->
+  <!--style="background-image: url('/assets/imgs/12.jpg')">-->
+  <!--<div class="halfCircleBottom">-->
+  <!--<p class="main-category-txt">غذای اصلی</p>-->
+  <!--</div>-->
+  <!--</button>  -->
+
+  <button class="category-card" [class.active]="viewMode == 'MainFood'" rel="MainFood" (click)="viewMode ='MainFood'"
+          (click)="onActiveCategory('mainFood')"
+          [ngClass]="{'active-category-card' : activeCategory == 'mainFood'}">
+    <mat-icon svgIcon="mainFood" class="main-category-icon"
+              [ngClass]="{'active-category-icon' : activeCategory == 'mainFood'}"></mat-icon>
+    <p class="main-category-txt"
+       [ngClass]="{'active-category-txt' : activeCategory == 'mainFood'}">غذای اصلی</p>
   </button>
 
-  <button class="circle" [class.active]="viewMode == 'Starters'" rel="Starters" (click)="viewMode ='Starters'"
-          style="background-image: url('/assets/imgs/13.jpg')">
-    <div class="halfCircleBottom">
-      <p class="main-category-txt">پیش غذا</p>
-    </div>
+  <button class="category-card" [class.active]="viewMode == 'Starters'" rel="Starters" (click)="viewMode ='Starters'"
+          (click)="onActiveCategory('starter')"
+          [ngClass]="{'active-category-card' : activeCategory == 'starter'}">
+    <mat-icon svgIcon="starter" class="main-category-icon"
+              [ngClass]="{'active-category-icon' : activeCategory == 'starter'}"></mat-icon>
+    <p class="main-category-txt"
+       [ngClass]="{'active-category-txt' : activeCategory == 'starter'}">پیش غذا</p>
   </button>
-  <button class="circle" [class.active]="viewMode == 'Salads'" rel="Salads" (click)="viewMode ='Salads'"
-          style="background-image: url('/assets/imgs/14.jpg')">
-    <div class="halfCircleBottom">
-      <p class="main-category-txt">نوشیدنی</p>
-    </div>
+
+  <button class="category-card" [class.active]="viewMode == 'Drinks'" rel="Salads" (click)="viewMode ='Drinks'"
+          (click)="onActiveCategory('drink')"
+          [ngClass]="{'active-category-card' : activeCategory == 'drink'}">
+    <mat-icon svgIcon="drink" class="main-category-icon"
+              [ngClass]="{'active-category-icon' : activeCategory == 'drink'}"></mat-icon>
+    <p class="main-category-txt"
+       [ngClass]="{'active-category-txt' : activeCategory == 'drink'}">نوشیدنی</p>
   </button>
-  <button class="circle" [class.active]="viewMode == 'Drinks'" rel="Drinks" (click)="viewMode ='Drinks'"
-          style="background-image: url('/assets/imgs/15.jpg')">
-    <div class="halfCircleBottom">
-      <p class="main-category-txt">سالاد و مخلفات</p>
-    </div>
+
+  <button class="category-card" [class.active]="viewMode == 'Salads'" rel="Drinks" (click)="viewMode ='Salads'"
+          (click)="onActiveCategory('salad')"
+          [ngClass]="{'active-category-card' : activeCategory == 'salad'}">
+    <mat-icon svgIcon="salad" class="main-category-icon"
+              [ngClass]="{'active-category-icon' : activeCategory == 'salad'}"></mat-icon>
+    <p class="main-category-txt"
+       [ngClass]="{'active-category-txt' : activeCategory == 'salad'}">سالاد</p>
   </button>
-  <button class="circle" [class.active]="viewMode == 'Desserts'" rel="Desserts" (click)="viewMode ='Desserts'"
-          style="background-image: url('/assets/imgs/16.jpg')">
-    <div class="halfCircleBottom">
-      <p class="main-category-txt">دسر</p>
-    </div>
+
+  <button class="category-card" [class.active]="viewMode == 'Desserts'" rel="Desserts" (click)="viewMode ='Desserts'"
+          (click)="onActiveCategory('dessert')"
+          [ngClass]="{'active-category-card' : activeCategory == 'dessert'}">
+    <mat-icon svgIcon="dessert" class="main-category-icon"
+              [ngClass]="{'active-category-icon' : activeCategory == 'dessert'}"></mat-icon>
+    <p class="main-category-txt"
+       [ngClass]="{'active-category-txt' : activeCategory == 'dessert'}">دسر</p>
   </button>
+
+  <!--<button class="circle" [class.active]="viewMode == 'Starters'" rel="Starters" (click)="viewMode ='Starters'"-->
+  <!--style="background-image: url('/assets/imgs/13.jpg')">-->
+  <!--<div class="halfCircleBottom">-->
+  <!--<p class="main-category-txt">پیش غذا</p>-->
+  <!--</div>-->
+  <!--</button>-->
+  <!--<button class="circle" [class.active]="viewMode == 'Salads'" rel="Salads" (click)="viewMode ='Salads'"-->
+  <!--style="background-image: url('/assets/imgs/14.jpg')">-->
+  <!--<div class="halfCircleBottom">-->
+  <!--<p class="main-category-txt">نوشیدنی</p>-->
+  <!--</div>-->
+  <!--</button>-->
+  <!--<button class="circle" [class.active]="viewMode == 'Drinks'" rel="Drinks" (click)="viewMode ='Drinks'"-->
+  <!--style="background-image: url('/assets/imgs/15.jpg')">-->
+  <!--<div class="halfCircleBottom">-->
+  <!--<p class="main-category-txt">سالاد و مخلفات</p>-->
+  <!--</div>-->
+  <!--</button>-->
+  <!--<button class="circle" [class.active]="viewMode == 'Desserts'" rel="Desserts" (click)="viewMode ='Desserts'"-->
+  <!--style="background-image: url('/assets/imgs/16.jpg')">-->
+  <!--<div class="halfCircleBottom">-->
+  <!--<p class="main-category-txt">دسر</p>-->
+  <!--</div>-->
+  <!--</button>-->
 
 </div>
 
-<div class="narrow" style="margin-top: 90px"></div>
+<!--<div class="narrow" style="margin-top: 90px"></div>-->
 
-<div class="container" style="display: flex;max-width: 100%;margin-bottom: 30px;position: relative;min-height: 600px;">
-  <div style="position: relative;float: left;right: 115px;opacity: 0.4">
-    <img src="/assets/imgs/ornomental.svg" style="height: 232px;width: 232px">
-  </div>
+<div class="container" style="margin-top: 50px">
+  <!--<div style="position: relative;float: left;right: 115px;opacity: 0.4">-->
+  <!--<img src="/assets/imgs/ornomental.svg" style="height: 232px;width: 232px">-->
+  <!--</div>-->
 
-  <div [ngSwitch]="viewMode" class="menu-modify-width" style="text-align: right;">
+  <div [ngSwitch]="viewMode" class="menu-modify-width" style="text-align: right;direction: rtl">
 
     <div *ngSwitchCase="'MainFood'">
 
-      <div class="row" style="margin-top: 90px">
-        <div class="column" style="padding-right: 100px;">
+      <div class="row" style="justify-content: center;">
+
+        <div class="column">
           <div *ngFor="let items of mainFoodArray; let i=index">
-            <div *ngIf="i > mainFoodNum/2">
+            <div *ngIf="i <= mainFoodNum/2">
               <div>
                 <div class="title">{{items.title}}</div>
                 <div class="description">{{items.description}}</div>
@@ -81,9 +127,11 @@
           </div>
         </div>
 
-        <div class="column">
+        <div class="MiddleColumn"></div>
+
+        <div class="column" style="padding-right: 1%;">
           <div *ngFor="let items of mainFoodArray; let i=index">
-            <div *ngIf="i <= mainFoodNum/2">
+            <div *ngIf="i > mainFoodNum/2">
               <div>
                 <div class="title">{{items.title}}</div>
                 <div class="description">{{items.description}}</div>
@@ -98,19 +146,7 @@
     </div>
     <div *ngSwitchCase="'Starters'">
 
-      <div class="row" style="margin-top: 90px">
-        <div class="column" style="padding-right: 100px;">
-          <div *ngFor="let items of starterArray; let i=index">
-            <div *ngIf="i > starterNum/2">
-              <div>
-                <div class="title">{{items.title}}</div>
-                <div class="description">{{items.description}}</div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
+      <div class="row" style="justify-content: center;">
         <div class="column">
           <div *ngFor="let items of starterArray; let i=index">
             <div *ngIf="i <= starterNum/2">
@@ -123,27 +159,11 @@
           </div>
         </div>
 
-      </div>
+        <div class="MiddleColumn"></div>
 
-    </div>
-    <div *ngSwitchCase="'Salads'">
-
-      <div class="row" style="margin-top: 90px">
-        <div class="column" style="padding-right: 100px;">
-          <div *ngFor="let items of saladArray; let i=index">
-            <div *ngIf="i > saladNum/2">
-              <div>
-                <div class="title">{{items.title}}</div>
-                <div class="description">{{items.description}}</div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <div *ngFor="let items of saladArray; let i=index">
-            <div *ngIf="i <= saladNum/2">
+        <div class="column" style="padding-right: 1%;">
+          <div *ngFor="let items of starterArray; let i=index">
+            <div *ngIf="i > starterNum/2">
               <div>
                 <div class="title">{{items.title}}</div>
                 <div class="description">{{items.description}}</div>
@@ -158,8 +178,23 @@
     </div>
     <div *ngSwitchCase="'Drinks'">
 
-      <div class="row" style="margin-top: 90px">
-        <div class="column" style="padding-right: 100px;">
+      <div class="row" style="justify-content: center;">
+
+        <div class="column">
+          <div *ngFor="let items of drinkArray; let i=index">
+            <div *ngIf="i <= drinkNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="MiddleColumn"></div>
+
+        <div class="column" style="padding-right: 1%;">
           <div *ngFor="let items of drinkArray; let i=index">
             <div *ngIf="i > drinkNum/2">
               <div>
@@ -171,9 +206,30 @@
           </div>
         </div>
 
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'Salads'">
+
+      <div class="row" style="justify-content: center;">
+
         <div class="column">
-          <div *ngFor="let items of drinkArray; let i=index">
-            <div *ngIf="i <= drinkNum/2">
+          <div *ngFor="let items of saladArray; let i=index">
+            <div *ngIf="i <= saladNum/2">
+              <div>
+                <div class="title">{{items.title}}</div>
+                <div class="description">{{items.description}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="MiddleColumn"></div>
+
+        <div class="column" style="padding-right: 1%;">
+          <div *ngFor="let items of saladArray; let i=index">
+            <div *ngIf="i > saladNum/2">
               <div>
                 <div class="title">{{items.title}}</div>
                 <div class="description">{{items.description}}</div>
@@ -188,10 +244,11 @@
     </div>
     <div *ngSwitchCase="'Desserts'">
 
-      <div class="row" style="margin-top: 90px">
-        <div class="column" style="padding-right: 100px;">
+      <div class="row" style="justify-content: center;">
+
+        <div class="column">
           <div *ngFor="let items of dessertArray; let i=index">
-            <div *ngIf="i > dessertNum/2">
+            <div *ngIf="i <= dessertNum/2">
               <div>
                 <div class="title">{{items.title}}</div>
                 <div class="description">{{items.description}}</div>
@@ -201,9 +258,11 @@
           </div>
         </div>
 
-        <div class="column">
+        <div class="MiddleColumn"></div>
+
+        <div class="column" style="padding-right: 1%;">
           <div *ngFor="let items of dessertArray; let i=index">
-            <div *ngIf="i <= dessertNum/2">
+            <div *ngIf="i > dessertNum/2">
               <div>
                 <div class="title">{{items.title}}</div>
                 <div class="description">{{items.description}}</div>
@@ -219,9 +278,9 @@
 
   </div>
 
-  <div style="top: 130px;opacity: 0.4;left: 79%;position: absolute;float: left;">
-    <img src="/assets/imgs/ornomental.svg" style="height: 580px;width: 580px">
-  </div>
+  <!--<div style="top: 130px;opacity: 0.4;left: 79%;position: absolute;float: left;">-->
+  <!--<img src="/assets/imgs/ornomental.svg" style="height: 580px;width: 580px">-->
+  <!--</div>-->
 </div>
 
 

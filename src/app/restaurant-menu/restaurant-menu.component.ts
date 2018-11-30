@@ -27,8 +27,13 @@ export class RestaurantMenuComponent implements OnInit {
   public saladNum: any;
   public drinkNum: any;
   public dessertNum: any;
+  activeCategory = 'mainFood';
 
   constructor(private dataService: DataService, private appGlobal: AppGlobals) {
+  }
+
+  onActiveCategory(value) {
+    this.activeCategory = value;
   }
 
   ngOnInit() {
@@ -142,7 +147,9 @@ export class RestaurantMenuComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.dessertArray.push(this.dessertItem);
           } else {
-            this.dessertArray = this.dessertItem;
+            this.dessertArray = Array.isArray(this.dessertItem)
+              ? this.dessertArray : [ this.dessertArray ];
+            // this.dessertArray = this.dessertItem;
           }
         }
       }
