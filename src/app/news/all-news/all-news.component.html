@@ -24,7 +24,7 @@
 
 <!--News Card-->
 <div class="card-bg d-rtl">
-  <div class="card-section" *ngIf="newsCardNum!==1; else oneNew">
+  <div class="card-section">
 
     <!--Set card layout-->
     <div class="card-position-set" *ngFor='let news of newsArray'>
@@ -43,14 +43,11 @@
           <h4 class="card-title card-title-property"
               routerLinkActive="active" [routerLink]="[news.postURL]"><a>{{ news.title }}</a></h4>
           <!-- Text -->
-          <!--<markdown [{{ news.summary }}]="markdown | language : 'typescript'"></markdown>-->
-          <!--<div class="card-text" [news.summary]="markdown | language : 'typescript'"></div>-->
-          <!--<p class="card-text">{{ news.summary }}</p>-->
-          <!--<markdown [data]="markdown | language : 'typescript'"></markdown>-->
-          <!--{{ news.summary }}-->
+
           <!-- Button -->
           <button class="btn more-btn"
-                  routerLinkActive="active" [routerLink]="[news.postURL]">بیشتر</button>
+                  routerLinkActive="active" [routerLink]="[news.postURL]">بیشتر
+          </button>
 
         </div>
       </div>
@@ -60,28 +57,28 @@
   </div>
 
 
-  <ng-template class="card-section" #oneNew>
-    <div class="card-position-set">
+  <!--<ng-template class="card-section" #oneNew>-->
+  <!--<div class="card-position-set">-->
 
-      <!-- Card -->
-      <div class="card" style="max-height: 365px;height: 365px">
+  <!--&lt;!&ndash; Card &ndash;&gt;-->
+  <!--<div class="card" style="max-height: 365px;height: 365px">-->
 
-        <!-- Card image -->
-        <img class="card-img" src="{{ newsArray[0].imagePath }}" alt="Card image cap">
+  <!--&lt;!&ndash; Card image &ndash;&gt;-->
+  <!--<img class="card-img" src="{{ newsArray[0].imagePath }}" alt="Card image cap">-->
 
-        <!-- Card content -->
-        <div class="card-body">
+  <!--&lt;!&ndash; Card content &ndash;&gt;-->
+  <!--<div class="card-body">-->
 
-          <!-- Title -->
-          <h4 class="card-title card-title-property"><a>{{ newsArray[0].title }}</a></h4>
+  <!--&lt;!&ndash; Title &ndash;&gt;-->
+  <!--<h4 class="card-title card-title-property"><a>{{ newsArray[0].title }}</a></h4>-->
 
-          <!-- Button -->
-          <button class="btn more-btn">بیشتر</button>
+  <!--&lt;!&ndash; Button &ndash;&gt;-->
+  <!--<button class="btn more-btn">بیشتر</button>-->
 
-        </div>
-        <!-- Card content -->
-      </div>
-      <!-- Card -->
-    </div>
-  </ng-template>
+  <!--</div>-->
+  <!--&lt;!&ndash; Card content &ndash;&gt;-->
+  <!--</div>-->
+  <!--&lt;!&ndash; Card &ndash;&gt;-->
+  <!--</div>-->
+  <!--</ng-template>-->
 </div>

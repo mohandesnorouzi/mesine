@@ -121,3 +121,15 @@ export class Desserts {
     this.imagePath = imagePath;
   }
 }
+
+export class AboutUs {
+  public content: string;
+  public imagePath1: string;
+  public imagePath2: string;
+
+  constructor(content: string, imagePath1: string, imagePath2: string) {
+    this.content = content;
+    this.imagePath1 = imagePath1;
+    this.imagePath2 = imagePath2;
+  }
+}

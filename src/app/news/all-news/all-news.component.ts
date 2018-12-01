@@ -14,7 +14,7 @@ export class AllNewsComponent implements OnInit {
   topBannerURL: any;
   newsItem: any;
   newsArray = [];
-  public newsCardNum: any;
+  // public newsCardNum: any;
 
   constructor(private dataService: DataService, private appGlobal: AppGlobals, private router: Router) {
 
@@ -46,7 +46,7 @@ export class AllNewsComponent implements OnInit {
 
     // Get news card from server
     this.dataService.getNews().subscribe(data => {
-      this.newsCardNum = data['result'].length;
+      // this.newsCardNum = data['result'].length;
       // console.log(this.newsCardNum);
 
       if (data['ok']) {
@@ -60,7 +60,7 @@ export class AllNewsComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.newsArray.push(this.newsItem);
           } else {
-            this.newsArray = this.newsItem;
+            this.newsArray = [this.newsItem];
           }
         }
         // this.newsArray.sort((a, b) =>

@@ -1,3 +1,47 @@
-<p>
-  about-us works!
-</p>
+<div class="top-banner" *ngIf="topBannerURL" [ngStyle]="{'background-image': 'url(' + topBannerURL + ')'}">
+
+  <!--Overlay-->
+  <div class="top-banner-overlay"></div>
+  <!--Overlay-->
+
+  <!--Make content go down from top of screen-->
+  <div style="height: 128.5px"></div>
+  <!--Make content go down from top of screen-->
+
+
+  <div class="container-shape" style="text-align: center;">
+    <div class="narrow-shape"></div>
+    <div class="shape">
+      <div style="font-size: 20px;
+    color: #6a0100;
+    font-weight: 500;
+    margin-top: 10px">درباره ما
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="row row-position"
+       style="justify-content: center;text-align: right;direction: rtl;padding-top: 70px;padding-bottom: 70px">
+    <div class="column-txt">
+      {{aboutUsText}}
+    </div>
+
+    <div class="column-pics">
+      <div class="rectangular1">
+        <img src="{{aboutUsImage1}}" class="aboutUsImg img1-position">
+      </div>
+
+      <div class="rectangular2">
+        <img src="{{aboutUsImage2}}" class="aboutUsImg img2-position">
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+

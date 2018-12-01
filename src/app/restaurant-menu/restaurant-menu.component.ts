@@ -61,11 +61,11 @@ export class RestaurantMenuComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.mainFoodArray.push(this.mainFoodItem);
           } else {
-            this.mainFoodArray = this.mainFoodItem;
+            this.mainFoodArray = [this.mainFoodItem];
           }
         }
       }
-      console.log(this.mainFoodArray);
+      // console.log(this.mainFoodArray);
 
     }, error => {
       console.log(error);
@@ -84,7 +84,7 @@ export class RestaurantMenuComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.starterArray.push(this.starterItem);
           } else {
-            this.starterArray = this.starterItem;
+            this.starterArray = [this.starterItem];
           }
         }
       }
@@ -105,7 +105,7 @@ export class RestaurantMenuComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.saladArray.push(this.saladItem);
           } else {
-            this.saladArray = this.saladItem;
+            this.saladArray = [this.saladItem];
           }
         }
       }
@@ -126,7 +126,7 @@ export class RestaurantMenuComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.drinkArray.push(this.drinkItem);
           } else {
-            this.drinkArray = this.drinkItem;
+            this.drinkArray = [this.drinkItem];
           }
         }
       }
@@ -147,9 +147,7 @@ export class RestaurantMenuComponent implements OnInit {
           if (data['result'].length !== 1) {
             this.dessertArray.push(this.dessertItem);
           } else {
-            this.dessertArray = Array.isArray(this.dessertItem)
-              ? this.dessertArray : [ this.dessertArray ];
-            // this.dessertArray = this.dessertItem;
+            this.dessertArray = [this.dessertItem];
           }
         }
       }

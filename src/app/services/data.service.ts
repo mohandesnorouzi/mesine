@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AppGlobals} from './app-globals.service';
 import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
 
 
 @Injectable() // This is for let some service injectable in other service
@@ -41,13 +42,14 @@ export class DataService {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-card/', null);
   }
 
+  // getOneNews(id: string): Observable<Blob> {
+  //   const data = {id: id};
+  //   return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-content/', data, {responseType: 'blob'});
+  // }
+
   getOneNews(id: string) {
     const data = {id: id};
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'news-content/', data);
-  }
-
-  getMainFood() {
-    return this.httpClient.post(this.appGlobal.httpRequestURL + 'main-course/', null);
   }
 
   getMainFoods() {
@@ -67,7 +69,15 @@ export class DataService {
   }
 
   getDesserts() {
-    return this.httpClient.post(this.appGlobal.httpRequestURL + 'dessert/', null);
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'desserts/', null);
+  }
+
+  getAboutUsBanner() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'aboutus-banner/', null);
+  }
+
+  getAboutUs() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'about-us/', null);
   }
 
 }
