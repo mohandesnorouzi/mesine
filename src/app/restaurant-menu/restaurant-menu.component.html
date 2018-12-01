@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div class="container" style="margin-top: 80px;text-align: center;direction: rtl">
+<div class="menu-container" style="direction: rtl" id="myElement">
 
   <!--<button class="circle" [class.active]="viewMode == 'MainFood'" rel="MainFood" (click)="viewMode ='MainFood'"-->
   <!--style="background-image: url('/assets/imgs/12.jpg')">-->
@@ -32,15 +32,17 @@
 
   <button class="category-card" [class.active]="viewMode == 'MainFood'" rel="MainFood" (click)="viewMode ='MainFood'"
           (click)="onActiveCategory('mainFood')"
+          (click)="scrollToMenuList()"
           [ngClass]="{'active-category-card' : activeCategory == 'mainFood'}">
     <mat-icon svgIcon="mainFood" class="main-category-icon"
               [ngClass]="{'active-category-icon' : activeCategory == 'mainFood'}"></mat-icon>
-    <p class="main-category-txt"
-       [ngClass]="{'active-category-txt' : activeCategory == 'mainFood'}">غذای اصلی</p>
+    <div class="main-category-txt"
+       [ngClass]="{'active-category-txt' : activeCategory == 'mainFood'}">غذای اصلی</div>
   </button>
 
   <button class="category-card" [class.active]="viewMode == 'Starters'" rel="Starters" (click)="viewMode ='Starters'"
           (click)="onActiveCategory('starter')"
+          (click)="scrollToMenuList()"
           [ngClass]="{'active-category-card' : activeCategory == 'starter'}">
     <mat-icon svgIcon="starter" class="main-category-icon"
               [ngClass]="{'active-category-icon' : activeCategory == 'starter'}"></mat-icon>
@@ -50,6 +52,7 @@
 
   <button class="category-card" [class.active]="viewMode == 'Drinks'" rel="Salads" (click)="viewMode ='Drinks'"
           (click)="onActiveCategory('drink')"
+          (click)="scrollToMenuList()"
           [ngClass]="{'active-category-card' : activeCategory == 'drink'}">
     <mat-icon svgIcon="drink" class="main-category-icon"
               [ngClass]="{'active-category-icon' : activeCategory == 'drink'}"></mat-icon>
@@ -59,6 +62,7 @@
 
   <button class="category-card" [class.active]="viewMode == 'Salads'" rel="Drinks" (click)="viewMode ='Salads'"
           (click)="onActiveCategory('salad')"
+          (click)="scrollToMenuList()"
           [ngClass]="{'active-category-card' : activeCategory == 'salad'}">
     <mat-icon svgIcon="salad" class="main-category-icon"
               [ngClass]="{'active-category-icon' : activeCategory == 'salad'}"></mat-icon>
@@ -68,6 +72,7 @@
 
   <button class="category-card" [class.active]="viewMode == 'Desserts'" rel="Desserts" (click)="viewMode ='Desserts'"
           (click)="onActiveCategory('dessert')"
+          (click)="scrollToMenuList()"
           [ngClass]="{'active-category-card' : activeCategory == 'dessert'}">
     <mat-icon svgIcon="dessert" class="main-category-icon"
               [ngClass]="{'active-category-icon' : activeCategory == 'dessert'}"></mat-icon>

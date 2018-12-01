@@ -73,7 +73,7 @@
 }
 
 .main-category-txt {
-  position: relative;
+  //position: relative;
   font-size: 20px;
   font-weight: 500;
   margin: 0;
@@ -120,13 +120,24 @@
   opacity: 0.3;
 }
 
+.menu-container {
+  display: flex;
+  max-width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  justify-content: center;
+  margin-top: 70px;
+  text-align: center;
+}
+
 .container {
   display: flex;
   max-width: 100%;
   margin-bottom: 30px;
   position: relative;
-  //min-height: 600px;
   justify-content: center;
+  margin-top: 70px;
+  text-align: center;
 }
 
 .menu-modify-width {
@@ -171,27 +182,14 @@
   clear: both;
 }
 
-// Category part responsive
-@media screen and (max-width: 1200px) {
-
-  .circle {
-    height: 140px;
-    width: 140px;
-  }
-  .halfCircleBottom {
-    height: 140px;
-    width: 140px;
-  }
-  .main-category-txt {
-    top: 90px;
-    font-size: 18px;
-  }
-}
-
 @media screen and (max-width: 992px) {
 
   .MiddleColumn {
     width: 5%;
+  }
+  .category-card {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -203,15 +201,44 @@
   .MiddleColumn {
     width: 5%;
   }
+  .category-card {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .main-category-txt {
+    font-size: 18px;
+  }
+  .main-category-icon {
+    height: 69px;
+  }
 }
 
 @media screen and (max-width: 576px) {
 
+  .menu-container {
+    display: grid;
+  }
   .menu-modify-width {
     width: 90%;
     min-width: 0;
   }
-
+  .category-card {
+    width: 288px;
+    height: 60px;
+    text-align: right;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .main-category-txt {
+    position: relative;
+    top: 8px;
+    right: 50px;
+  }
+  .main-category-icon {
+    height: 45px;
+    position: relative;
+    top: 0;
+  }
   .column {
     width: 80%;
     padding-top: 0;

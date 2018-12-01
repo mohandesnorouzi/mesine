@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {DataService} from '../services/data.service';
 import {AppGlobals} from '../services/app-globals.service';
 import {Desserts, Drinks, MainFoods, News, Salads, Starters} from '../site.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-menu',
@@ -28,15 +29,32 @@ export class RestaurantMenuComponent implements OnInit {
   public drinkNum: any;
   public dessertNum: any;
   activeCategory = 'mainFood';
+  innerWidth: any;
+  @ViewChild('myElement') myElement: ElementRef;
 
-  constructor(private dataService: DataService, private appGlobal: AppGlobals) {
+  constructor(private dataService: DataService, private appGlobal: AppGlobals, private router: Router) {
   }
+
+  scrollToMenuList() {
+    window.scrollTo(0, 500);
+  }
+
+  // public scrollToResults() {
+  //
+  //   setTimeout(() => {
+  //     const element = document.getElementById('myElement');
+  //     element.scrollIntoView();
+  //   }, 2000);
+  // }
 
   onActiveCategory(value) {
     this.activeCategory = value;
   }
 
+
   ngOnInit() {
+
+    // this.scrollToResults();
 
     // Get top banner from server
     this.dataService.getNewsBanner().subscribe(data => {
