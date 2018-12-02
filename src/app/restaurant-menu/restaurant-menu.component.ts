@@ -1,8 +1,9 @@
-import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DataService} from '../services/data.service';
 import {AppGlobals} from '../services/app-globals.service';
-import {Desserts, Drinks, MainFoods, News, Salads, Starters} from '../site.model';
+import {Desserts, Drinks, MainFoods, Salads, Starters} from '../site.model';
 import {Router} from '@angular/router';
+import {ScrollToConfigOptions, ScrollToService} from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
   selector: 'app-restaurant-menu',
@@ -18,11 +19,13 @@ export class RestaurantMenuComponent implements OnInit {
   saladItem: any;
   drinkItem: any;
   dessertItem: any;
+  foodPicsItem: any;
   mainFoodArray = [];
   starterArray = [];
   saladArray = [];
   drinkArray = [];
   dessertArray = [];
+  foodPicsArray = [];
   public mainFoodNum: any;
   public starterNum: any;
   public saladNum: any;
@@ -32,20 +35,27 @@ export class RestaurantMenuComponent implements OnInit {
   innerWidth: any;
   @ViewChild('myElement') myElement: ElementRef;
 
-  constructor(private dataService: DataService, private appGlobal: AppGlobals, private router: Router) {
+  constructor(private dataService: DataService, private appGlobal: AppGlobals, private router: Router
+    , private scrollToService: ScrollToService) {
   }
 
   scrollToMenuList() {
-    window.scrollTo(0, 500);
+    // const element = document.getElementById('myElement');
+    // smoothScroll(element);
+    // window.scrollTo(0, 500);
   }
 
-  // public scrollToResults() {
-  //
-  //   setTimeout(() => {
-  //     const element = document.getElementById('myElement');
-  //     element.scrollIntoView();
-  //   }, 2000);
-  // }
+  triggerScrollTo() {
+    const config: ScrollToConfigOptions = {
+      // container: 'custom-container',
+      target: 'MenuSection',
+      duration: 3000,
+      easing: 'easeOutElastic',
+      // offset: 200
+    };
+
+    this.scrollToService.scrollTo(config);
+  }
 
   onActiveCategory(value) {
     this.activeCategory = value;
@@ -53,8 +63,6 @@ export class RestaurantMenuComponent implements OnInit {
 
 
   ngOnInit() {
-
-    // this.scrollToResults();
 
     // Get top banner from server
     this.dataService.getNewsBanner().subscribe(data => {
@@ -172,6 +180,24 @@ export class RestaurantMenuComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+
+    // Get all kind of menu items pictures from server
+    this.dataService.getFoodPics().subscribe(data => {
+      if (data['ok']) {
+        for (let i = 0; i < data['result'].length; i++) {
+          this.foodPicsItem = this.appGlobal.MediaURL + data['result'][i]['food_pic']['file'];
+
+          if (data['result'].length !== 1) {
+            this.foodPicsArray.push(this.foodPicsItem);
+          } else {
+            this.foodPicsArray = [this.foodPicsItem];
+          }
+        }
+      }
+    }, error => {
+      console.log(error);
+    });
+
 
   }
 

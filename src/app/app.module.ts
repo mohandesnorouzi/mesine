@@ -17,8 +17,9 @@ import {DataService} from './services/data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {ClickOutsideModule} from 'ng4-click-outside';
-import { NewsContentComponent } from './news/news-content/news-content.component';
-import { AllNewsComponent } from './news/all-news/all-news.component';
+import {NewsContentComponent} from './news/news-content/news-content.component';
+import {AllNewsComponent} from './news/all-news/all-news.component';
+import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AllNewsComponent } from './news/all-news/all-news.component';
     HeaderComponent,
     FooterComponent,
     NewsContentComponent,
-    AllNewsComponent
+    AllNewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,8 @@ import { AllNewsComponent } from './news/all-news/all-news.component';
     AppRoutingModule,
     HttpClientModule,
     MatIconModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    ScrollToModule.forRoot()
   ],
   providers: [AppGlobals, DataService],
   bootstrap: [AppComponent]

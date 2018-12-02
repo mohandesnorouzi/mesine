@@ -72,6 +72,10 @@ export class DataService {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'desserts/', null);
   }
 
+  getFoodPics() {
+    return this.httpClient.post(this.appGlobal.httpRequestURL + 'food-pics', null);
+  }
+
   getAboutUsBanner() {
     return this.httpClient.post(this.appGlobal.httpRequestURL + 'aboutus-banner/', null);
   }
