@@ -183,8 +183,9 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 40px;
-  box-shadow: 0 0 35px #616161; //applying shadow to 4 sides of card
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); //applying shadow to 4 sides of card
   display: flex;
+  border-radius: 10px;
 }
 
 .services-overlay {
@@ -193,6 +194,7 @@
   height: 251px;
   width: 550px;
   position: absolute;
+  border-radius: 10px;
 }
 
 .services-shape {
@@ -245,6 +247,7 @@
   display: flex;
   z-index: 1;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); //applying shadow to 4 sides of card
+  border-radius: 10px;
 }
 
 .address-bg {

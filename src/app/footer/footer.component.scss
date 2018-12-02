@@ -49,6 +49,13 @@
   color: #f3881b;
 }
 
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 540px;
+  }
+}
+
 @media screen and (max-width: 576px) {
 
   .footer-bg {
