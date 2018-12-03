@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../services/data.service';
 import {AppGlobals} from '../services/app-globals.service';
-import {AboutUs, News} from '../site.model';
 
 @Component({
   selector: 'app-about-us',

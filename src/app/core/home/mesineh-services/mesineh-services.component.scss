@@ -1,0 +1,177 @@
+// Css for Value Proposition background and overall section div
+.vp-bg {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.narrow-shape {
+  width: 100%;
+  height: 1px;
+  background-color: #C9390C;
+  position: absolute;
+}
+
+.shape {
+  width: 242px;
+  height: 57px;
+  border: 1px solid #C9390C;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+// Css for setting container of restaurant services context | this part must change related to media query
+.service-container, .popular-menu-container, .address-container {
+  width: 1300px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Css for setting div of value proposition context | this part must change related to media query
+.service-section, .popular-menu-section {
+  padding-top: 70px;
+  //width: 1300px;
+  //margin-right: 40px;
+}
+
+.main-box {
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.services {
+  /* height and width */
+  width: 550px;
+  height: 251px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); //applying shadow to 4 sides of card
+  display: flex;
+  border-radius: 10px;
+}
+
+.services-overlay {
+  background: #000000;
+  opacity: 0.59;
+  height: 251px;
+  width: 550px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.services-shape {
+  width: 242px;
+  height: 57px;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: #c9380b66;
+  margin-top: 97px;
+  margin-right: 171px;
+}
+
+.services-txt {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+// Services responsive
+@media screen and (max-width: 1200px) {
+
+  .services {
+    width: 440px;
+  }
+  .services-overlay {
+    width: 440px;
+  }
+  .services-shape {
+    margin-right: 110px;
+  }
+}
+
+// Services responsive
+@media screen and (max-width: 992px) {
+
+  .services {
+    width: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .services-overlay {
+    width: 350px;
+  }
+  .services-shape {
+    margin-right: 55px;
+  }
+  .service-section {
+    width: 100%;
+  }
+}
+
+// Services responsive
+@media screen and (max-width: 768px) {
+
+  .services {
+    width: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .services-overlay {
+    width: 250px;
+  }
+  .services-shape {
+    width: 215px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  .service-section {
+    width: 100%;
+  }
+  .services-txt {
+    font-size: 16px;
+  }
+}
+
+// Services responsive
+@media screen and (max-width: 576px) {
+
+  .services {
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .services-overlay {
+    width: 300px;
+  }
+  .services-shape {
+    width: 215px;
+    height: 50px;
+    margin-right: 35px;
+  }
+  .service-section {
+    width: 100%;
+  }
+  .services-txt {
+    font-size: 16px;
+  }
+}

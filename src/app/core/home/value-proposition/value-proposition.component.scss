@@ -1,0 +1,97 @@
+// Css for Value Proposition background and overall section div
+.vp-bg {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+// Css for setting container of value proposition context | this part must change related to media query
+.vp-container {
+  width: 950px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Css for setting div of value proposition context | this part must change related to media query
+.vp-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 70px;
+  width: 950px;
+}
+
+// Css for div of text | this part must change related to media query
+.vp-txt-pd {
+  //padding-right: 80px;
+  //padding-left: 80px;
+  text-align: center;
+}
+
+.value-proposition-size {
+  height: 225px;
+  width: 225px;
+}
+
+// Css for value proposition title | this part must change related to media query
+.vp-title {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 500;
+  padding-right: 10px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+// Value proposition responsive
+@media screen and (max-width: 992px) {
+
+  .vp-section {
+    width: 95%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .value-proposition-size {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+// Value proposition responsive
+@media screen and (max-width: 768px) {
+
+  .vp-section {
+    width: 95%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .value-proposition-size {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+// Value proposition responsive
+@media screen and (max-width: 576px) {
+  .title-property {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  .vp-section {
+    display: block;
+  }
+  .value-proposition-size {
+    height: 200px;
+    width: 200px;
+  }
+  .vp-title {
+    margin-bottom: 50px;
+  }
+}

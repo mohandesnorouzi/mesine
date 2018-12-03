@@ -1,0 +1,33 @@
+<!--Popular Menu-->
+<div class="vp-bg">
+  <div class="narrow-shape">
+  </div>
+  <div class="shape">
+    <div style="font-size: 20px;
+    color: #6a0100;
+    font-weight: 500;
+    margin-top: 10px">منوی محبوب رستوران
+    </div>
+  </div>
+</div>
+
+
+<div class="vp-bg">
+  <div class="menu-back-layout"></div>
+
+  <div class="popular-menu-container">
+    <div class="popular-menu-section">
+      <!--Grid row-->
+      <div class="main-box d-rtl">
+        <!--Grid column-->
+        <div class="" *ngFor='let popularmenu of popularMenuArray'>
+          <div class="popular-menu" [ngStyle]="{'background-image': 'url(' + popularmenu.imagePath + ')'}">
+          </div>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+</div>
+<!--Popular Menu-->

@@ -1,0 +1,18 @@
+<!--Value Proposition-->
+<div class="vp-bg">
+  <div class="vp-container">
+    <div class="vp-section">
+      <!--Grid row-->
+      <!--<div class="row d-rtl">-->
+      <!--Grid column-->
+      <div class="vp-txt-pd" *ngFor='let valueP of vpArray'>
+        <img class="value-proposition-size" src="{{ valueP.imagePath }}">
+        <h1 class="vp-title">{{ valueP.title }}</h1>
+      </div>
+      <!--Grid column-->
+      <!--</div>-->
+      <!--Grid row-->
+    </div>
+  </div>
+</div>
+<!--Value Proposition-->

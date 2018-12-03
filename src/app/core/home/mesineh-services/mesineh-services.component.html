@@ -1,0 +1,41 @@
+<!--Restaurant Services-->
+<div class="vp-bg">
+  <div class="narrow-shape">
+  </div>
+  <div class="shape">
+    <div style="font-size: 20px;
+    color: #6a0100;
+    font-weight: 500;
+    margin-top: 10px">سرویس های رستوران
+    </div>
+  </div>
+</div>
+
+
+<div class="vp-bg" style="margin-bottom: 40px">
+  <div class="service-container">
+    <div class="service-section">
+      <!--Grid row-->
+      <div class="main-box d-rtl">
+        <!--Grid column-->
+        <div class="" *ngFor='let services of serviceArray'>
+          <div class="services" [ngStyle]="{'background-image': 'url(' + services.imagePath + ')'}">
+
+            <!--Overlay-->
+            <div class="services-overlay"></div>
+            <!--Overlay-->
+
+            <div class="services-shape">
+              <div class="services-txt">{{services.title}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+</div>
+<!--Restaurant Services-->

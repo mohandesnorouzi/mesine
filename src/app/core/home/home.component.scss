@@ -1,0 +1,113 @@
+// Css for top image and this div context
+.top-banner-bg {
+  /* height and width */
+  width: 100%;
+  height: 709px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% center;
+}
+
+// Css for improving some issue in responsive in top banner div
+.container-top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 130px;
+}
+
+// Css for overlay top banner
+.top-banner-overlay {
+  background: #000000;
+  opacity: 0.59;
+  height: 709px;
+  width: 100%;
+  position: absolute;
+}
+
+// Css for overlay top narrow
+.narrow {
+  background: #000000;
+  opacity: 0.5;
+  height: 51px;
+  width: 100%;
+  position: absolute;
+}
+
+// Css for slogan top banner
+.slogan-property {
+  font-size: 24px;
+  line-height: 41px;
+  font-weight: 500;
+  text-align: center;
+  direction: rtl;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 550px;
+  padding-top: 20px;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+// Css for button in top banner
+.top-banner-btn {
+  background-color: #f3881b;
+  color: #ffffff;
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  width: 225px;
+  margin-top: 35px;
+  position: relative; //necessary to make context come over overlay
+  z-index: 1; //necessary to make context come over overlay
+}
+
+.title-property {
+  font-size: 15px;
+  padding: 10px;
+  line-height: 25px;
+  font-weight: 500;
+  display: inline-grid;
+  z-index: 2;
+  position: relative;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.title-property:hover {
+  color: #f3881b;
+}
+
+.address-bg {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  //justify-content: right;
+  align-items: center;
+  position: relative;
+}
+
+.address-back-layout {
+  background: #c9380b;
+  height: 492px;
+  width: 1143px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+@media screen and (max-width: 576px) {
+  .title-property {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+
+
